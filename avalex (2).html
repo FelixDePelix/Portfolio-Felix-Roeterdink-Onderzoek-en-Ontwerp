@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Afval Bestaat Niet | Felix Roeterdink</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Inter,sans-serif;background:#f6f6f6;color:#111;overflow-x:hidden}
+nav{position:fixed;top:0;width:100%;padding:25px 50px;display:flex;justify-content:space-between;background:rgba(246,246,246,.8);backdrop-filter:blur(10px);z-index:1000}
+nav a{text-decoration:none;color:#111;margin-left:20px}
+.timeline{position:fixed;left:30px;top:0;height:100vh;width:4px;background:#bbb;pointer-events:none}
+.dot{position:fixed;width:16px;height:16px;border-radius:50%;background:#111;left:24px;top:0}
+footer{padding:60px;text-align:center;color:#666}
+.project-page{padding:160px 12% 100px}
+.fakeimg{height:350px;border-radius:20px;background:linear-gradient(135deg,#ddd,#aaa);margin-bottom:30px}
+.back{display:inline-block;margin-bottom:20px;text-decoration:none;color:#555}
+.back:hover{color:#111}
+.project-page h1{font-size:clamp(2.5rem,6vw,4rem);margin-bottom:30px}
+.project-page p{font-size:1.15rem;line-height:1.75;color:#444;max-width:720px;margin-bottom:20px}
+</style>
+</head>
+<body>
+
+<div class="timeline"></div>
+<div class="dot"></div>
+
+<nav>
+<div><b>Felix Roeterdink</b></div>
+<div>
+<a href="index.html">Home</a>
+<a href="index.html#portfolio">Portfolio</a>
+</div>
+</nav>
+
+<div class="project-page">
+<a class="back" href="index.html#portfolio">← Terug naar projecten</a>
+<div class="fakeimg"></div>
+<h1>Afval Bestaat Niet</h1>
+<p>Voor Avalex ontwikkelden we een circulaire verpakkingsoplossing met als doel afvalstromen te verminderen en verpakkingen duurzamer en herbruikbaar te maken. We onderzochten welke verpakkingen op dit moment de grootste bijdrage leveren aan restafval en welke alternatieven daadwerkelijk haalbaar zijn binnen de huidige inzamel- en verwerkingsprocessen.</p>
+<p>Vanuit dit onderzoek werkten we een concreet ontwerp uit dat rekening houdt met zowel duurzaamheid als gebruiksgemak voor de consument. Het uiteindelijke voorstel werd getoetst op haalbaarheid en sloot aan bij de doelstellingen die Avalex hanteert rondom afvalreductie en circulariteit.</p>
+</div>
+
+<footer>© Felix Roeterdink</footer>
+
+<script>
+const dot=document.querySelector('.dot');
+
+window.addEventListener('scroll',()=>{
+const h=document.body.scrollHeight-window.innerHeight;
+const p=window.scrollY/h;
+const y=p*(window.innerHeight-16);
+dot.style.top=y+'px';
+});
+</script>
+</body>
+</html>
